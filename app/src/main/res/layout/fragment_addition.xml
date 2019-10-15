@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fill_half_addition_card"
+            tools:context=".ui.CancleCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/input_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/card_all_rounded4"
+                android:elevation="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/volume"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_premium"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="25dp"
+                    android:contentDescription="@string/product_icon"
+                    android:src="@drawable/ic_premium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_volume" />
+
+                <ImageView
+                    android:id="@+id/iv_bio"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/product_icon"
+                    android:src="@drawable/ic_bio"
+                    app:layout_constraintStart_toStartOf="@id/iv_premium"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_premium" />
+
+                <ImageView
+                    android:id="@+id/iv_pertamax"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/product_icon"
+                    android:src="@drawable/ic_pertamax"
+                    app:layout_constraintStart_toStartOf="@id/iv_bio"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_bio" />
+
+                <ImageView
+                    android:id="@+id/iv_pertalite"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/product_icon"
+                    android:src="@drawable/ic_pertalite"
+                    app:layout_constraintStart_toStartOf="@id/iv_pertamax"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_pertamax" />
+
+                <ImageView
+                    android:id="@+id/iv_dexlite"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/product_icon"
+                    android:src="@drawable/ic_dexlite"
+                    app:layout_constraintStart_toStartOf="@id/iv_pertalite"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_pertalite" />
+
+                <ImageView
+                    android:id="@+id/iv_pertadex"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/product_icon"
+                    android:src="@drawable/ic_pertadex"
+                    app:layout_constraintStart_toStartOf="@id/iv_dexlite"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_dexlite" />
+
+                <ImageView
+                    android:id="@+id/iv_turbo"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/product_icon"
+                    android:src="@drawable/ic_turbo"
+                    app:layout_constraintStart_toStartOf="@id/iv_pertadex"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_pertadex" />
+
+                <EditText
+                    android:id="@+id/et_premium"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_toggle"
+                    android:fontFamily="@font/montserrat2"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:padding="4dp"
+                    android:hint="@string/nol"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_premium"
+                    app:layout_constraintEnd_toStartOf="@id/tv_premium_kl"
+                    app:layout_constraintStart_toEndOf="@id/iv_premium"
+                    app:layout_constraintTop_toTopOf="@id/iv_premium" />
+
+                <EditText
+                    android:id="@+id/et_bio"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_toggle"
+                    android:fontFamily="@font/montserrat2"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:padding="4dp"
+                    android:hint="@string/nol"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_bio"
+                    app:layout_constraintEnd_toStartOf="@id/tv_bio_kl"
+                    app:layout_constraintStart_toEndOf="@id/iv_bio"
+                    app:layout_constraintTop_toTopOf="@id/iv_bio" />
+
+                <EditText
+                    android:id="@+id/et_pertamax"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_toggle"
+                    android:fontFamily="@font/montserrat2"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:padding="4dp"
+                    android:hint="@string/nol"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_pertamax"
+                    app:layout_constraintEnd_toStartOf="@id/tv_pertamax_kl"
+                    app:layout_constraintStart_toEndOf="@id/iv_pertamax"
+                    app:layout_constraintTop_toTopOf="@id/iv_pertamax" />
+
+                <EditText
+                    android:id="@+id/et_pertalite"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_toggle"
+                    android:fontFamily="@font/montserrat2"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:padding="4dp"
+                    android:hint="@string/nol"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_pertalite"
+                    app:layout_constraintEnd_toStartOf="@id/tv_pertalite_kl"
+                    app:layout_constraintStart_toEndOf="@id/iv_pertalite"
+                    app:layout_constraintTop_toTopOf="@id/iv_pertalite" />
+
+                <EditText
+                    android:id="@+id/et_dexlite"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_toggle"
+                    android:fontFamily="@font/montserrat2"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:padding="4dp"
+                    android:hint="@string/nol"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_dexlite"
+                    app:layout_constraintEnd_toStartOf="@id/tv_dexlite_kl"
+                    app:layout_constraintStart_toEndOf="@id/iv_dexlite"
+                    app:layout_constraintTop_toTopOf="@id/iv_dexlite" />
+
+                <EditText
+                    android:id="@+id/et_pertadex"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_toggle"
+                    android:fontFamily="@font/montserrat2"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:padding="4dp"
+                    android:hint="@string/nol"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_pertadex"
+                    app:layout_constraintEnd_toStartOf="@id/tv_pertadex_kl"
+                    app:layout_constraintStart_toEndOf="@id/iv_pertadex"
+                    app:layout_constraintTop_toTopOf="@id/iv_pertadex" />
+
+                <EditText
+                    android:id="@+id/et_turbo"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_toggle"
+                    android:fontFamily="@font/montserrat2"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:padding="4dp"
+                    android:hint="@string/nol"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_turbo"
+                    app:layout_constraintEnd_toStartOf="@id/tv_turbo_kl"
+                    app:layout_constraintStart_toEndOf="@id/iv_turbo"
+                    app:layout_constraintTop_toTopOf="@id/iv_turbo" />
+
+                <TextView
+                    android:id="@+id/tv_premium_kl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat2"
+                    android:text="@string/kl"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/et_premium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_premium" />
+
+                <TextView
+                    android:id="@+id/tv_bio_kl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat2"
+                    android:text="@string/kl"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/et_bio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_bio" />
+
+                <TextView
+                    android:id="@+id/tv_pertamax_kl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat2"
+                    android:text="@string/kl"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/et_pertamax"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_pertamax" />
+
+                <TextView
+                    android:id="@+id/tv_pertalite_kl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat2"
+                    android:text="@string/kl"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/et_pertalite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_pertalite" />
+
+                <TextView
+                    android:id="@+id/tv_dexlite_kl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat2"
+                    android:text="@string/kl"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/et_dexlite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_dexlite" />
+
+                <TextView
+                    android:id="@+id/tv_pertadex_kl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat2"
+                    android:text="@string/kl"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/et_pertadex"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_pertadex" />
+
+                <TextView
+                    android:id="@+id/tv_turbo_kl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat2"
+                    android:text="@string/kl"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/et_turbo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_turbo" />
+
+                <TextView
+                    android:id="@+id/tv_so"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/masukkan_so"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_turbo" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_so"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintStart_toStartOf="@id/tv_so"
+                    app:layout_constraintTop_toBottomOf="@id/tv_so">
+
+                    <EditText
+                        android:id="@+id/et_so"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_toggle"
+                        android:fontFamily="@font/montserrat2"
+                        android:hint="@string/no_so"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textColorHint="#c1c2c4" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_keterangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/keterangan"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@id/til_so"
+                    app:layout_constraintTop_toBottomOf="@id/til_so" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_keterangan"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColorHint="#c1c2c4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_keterangan"
+                    app:layout_constraintTop_toBottomOf="@id/tv_keterangan"
+                    app:layout_constraintVertical_bias="0">
+
+                    <EditText
+                        android:id="@+id/et_keterangan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_toggle"
+                        android:fontFamily="@font/montserrat2"
+                        android:hint="@string/keterangan"
+                        android:inputType="text"
+                        android:textColor="#000"
+                        android:textColorHint="#c1c2c4" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#85C226"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/kirim"
+                android:enabled="false"
+                app:cornerRadius="15dp"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/input_card"
+                app:layout_constraintStart_toStartOf="@id/input_card"
+                app:layout_constraintTop_toBottomOf="@id/input_card" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

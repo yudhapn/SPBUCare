@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="com.pertamina.spbucare.ui.adapter.QuizListener" />
+
+        <variable
+            name="quiz"
+            type="com.pertamina.spbucare.model.Quiz" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/card_all_radius_12"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:onClick="@{() -> clickListener.onClick(quiz)}">
+
+        <ImageView
+            android:id="@+id/iv_quiz"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_margin="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/quiz_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@{quiz.name}"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@id/iv_quiz"
+            app:layout_constraintTop_toTopOf="@id/iv_quiz" />
+
+        <ImageView
+            android:id="@+id/tv_status"
+            android:layout_width="34dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="@id/tv_name"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name"
+            app:setStatusComplete="@{quiz.complete}"
+            app:setStatusOpen="@{quiz.open}" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/dilaksanakan"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintVertical_bias="1"
+            app:setDateModief="@{quiz.createdOn}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

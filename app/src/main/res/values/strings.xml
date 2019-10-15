@@ -1,0 +1,176 @@
+<resources>
+    <string name="app_name">SPBU Care</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="beranda">Beranda</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="bantuan">Bantuan</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="profil">Profil</string>
+    <string name="edukasi">Edukasi</string>
+    <string name="volume">Volume</string>
+    <string name="jumlah">0</string>
+    <string name="kl">KL</string>
+    <string name="masukkan_so">Masukkan No. SO</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="informasi">Informasi</string>
+    <string name="navigation_drawer_header_title" translatable="false">Sunflower</string>
+    <string name="navigation_drawer_header_content_description" translation_description="Content description for the image that is shown at the top of the navigation drawer.">
+        Navigation drawer header logo
+    </string>
+    <string name="tambah_rencana">Tambah Rencana</string>
+    <string name="setor_angkut">Setor Angkut</string>
+    <string name="batal">Batal</string>
+    <string name="kirim">Kirim</string>
+    <string name="toolbar_image">Toolbar Image</string>
+    <string name="tambah">Tambah</string>
+    <string name="keluhan">Keluhan</string>
+    <string name="footer">footer</string>
+    <string name="sign_in">Sign in</string>
+    <string name="halo">Halo</string>
+    <string name="header">header</string>
+    <string name="email">Email</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="user_name">SPBU 004</string>
+    <string name="user_type">SPBU</string>
+    <string name="keluar">Keluar</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="ulasan">Ulasan</string>
+    <string name="kuis">Kuis</string>
+    <string name="back_icon">Back Icon</string>
+    <string name="product_icon">Product Icon</string>
+    <string name="no_so">No. SO</string>
+    <string name="nol">0</string>
+    <string name="konfirmasi">Konfirmasi</string>
+    <string name="splash_image">Splash Image</string>
+    <string name="tolak">Tolak</string>
+    <string name="setuju">Setuju</string>
+    <string name="hi">HI</string>
+    <string name="semua">Semua</string>
+    <string name="pembatalan">Pembatalan</string>
+    <string name="tarik_lo">Tarik LO</string>
+    <string name="darurat">Darurat</string>
+    <string name="tambah_edukasi">Tambah Edukasi</string>
+    <string name="tambah_kuis">Tambah Kuis</string>
+    <string name="tambah_informasi">Tambah Informasi</string>
+    <string name="tidak_ada_permintaan">Tidak ada permintaan pada periode ini</string>
+    <string name="belum_ada_notifikasi">Belum ada notifikasi pada hari ini</string>
+    <string name="atur_pengguna">Atur Pengguna</string>
+    <string name="jawaban_a">Jawaban A</string>
+    <string name="jawaban_b">Jawaban B</string>
+    <string name="jawaban_c">Jawaban C</string>
+    <string name="jawaban_d">Jawaban D</string>
+    <string name="jawaban_e">Jawaban E</string>
+    <string name="jawaban_f">Jawaban F</string>
+    <string name="jawaban_g">Jawaban G</string>
+    <string name="masuk">Masuk</string>
+    <string name="gambar_kategori">Gambar Kategori</string>
+    <string name="judul_kategori">Judul Kategori</string>
+    <string name="tambah_file">Tambah File (Opsional)</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="deskripsi_file">Deskripsi File</string>
+    <string name="simpan_file">Simpan File</string>
+    <string name="simpan_kategori">Simpan Kategori</string>
+    <string name="deskripsi_kategori">Deskripsi Kategori</string>
+    <string name="caption_file">Caption File</string>
+    <string name="tambah_kategori">Tambah Kategori</string>
+    <string name="gambar_informasi">Gambar Informasi</string>
+    <string name="judul_informasi">Judul Informasi</string>
+    <string name="simpan">Simpan</string>
+    <string name="detail_order">Detail Order</string>
+    <string name="nomor_so">Nomor SO</string>
+    <string name="premium">Premium</string>
+    <string name="bio_solar">Bio Solar</string>
+    <string name="pertamax">Pertamax</string>
+    <string name="pertalite">Pertalite</string>
+    <string name="dexlite">Dexlite</string>
+    <string name="pertadex">Pertadex</string>
+    <string name="pertamax_turbo">Pertamax Turbo</string>
+    <string name="total">Total</string>
+    <string name="soal_nomor_1">Soal Nomor 1</string>
+    <string name="nama_kuis">Nama Kuis</string>
+    <string name="tanggal_awal">Tanggal Awal</string>
+    <string name="tanggal_terakhir">Tanggal Terakhir</string>
+    <string name="sorting">Sorting</string>
+    <!-- Messages -->
+    <string name="set_permissions_in_settings">Go to Settings -> Apps and Notifications ->
+        WorkManager Demo -> App Permissions and grant access to Storage.
+    </string>
+    <string name="urut_berdasarkan">Urut Berdasarkan Periode</string>
+    <string name="tampilkan">Tampilkan</string>
+    <string name="kritik_dan_saran">Kritik dan Saran</string>
+    <string name="version">V 1.1.1</string>
+    <string name="tambah_pengguna">Tambah Pengguna</string>
+    <string name="jenis_pegawai">Jenis Pegawai</string>
+    <string name="nama">Nama</string>
+    <string name="nama_penganggung_jawab">Nama Penanggung Jawab</string>
+    <string name="nama_pekerja">Nama Pekerja</string>
+    <string name="posisi">Posisi</string>
+    <string name="atasan">Atasan</string>
+    <string name="operation_head">Operation Head</string>
+    <string name="saldo_cuti">Saldo Cuti</string>
+    <string name="ulangi_kata_sandi">Ulangi Kata Sandi</string>
+    <string name="info_image">Info Image</string>
+    <string name="buat_pesanan_back_date">Buat Pesanan (Back Date)</string>
+    <string name="spbu">SPBU</string>
+    <string name="nama_spbu">Nama SPBU</string>
+    <string name="create_order">Buat Pesanan (Back Date)</string>
+    <string name="top_10">Top 10</string>
+    <string name="lihat_permintaan">Lihat Permintaan</string>
+    <string name="alamat">Alamat</string>
+    <string name="telepon">Telepon</string>
+    <string name="atur_profil">atur profil</string>
+    <string name="atur_akun">atur akun</string>
+    <string name="no_spbu">No SPBU</string>
+    <string name="no_pegawai">No Pegawai</string>
+    <string name="jabatan">Jabatan</string>
+    <string name="sales_executive_retail">Sales Executive Retail</string>
+    <string name="jenis_pengguna">Jenis Pengguna</string>
+    <string name="hapus">Hapus</string>
+    <string name="waktu_pelaksanaan">Waktu Pelaksanaan</string>
+    <string name="lama_pengerjaan_menit">Lama Pengerjaan (menit)</string>
+    <string name="dilaksanakan">Dilaksanakan: </string>
+    <string name="detail_kuis">Detail Kuis</string>
+    <string name="waktu_pembuatan">Waktu Pembuatan</string>
+    <string name="durasi">Durasi</string>
+    <string name="status">Status</string>
+    <string name="jumlah_soal">Jumlah Soal</string>
+    <string name="buka_kuis">Buka Kuis</string>
+    <string name="tutup_kuis">Tutup Kuis</string>
+    <string name="kerjakan">Kerjakan</string>
+    <string name="_10_soal">10 soal</string>
+    <string name="set_periode">"Periode %1$s s/d %2$s"</string>
+    <string name="set_total">Total\n%1$s</string>
+    <string name="nomor_spbu">Nomor SPBU</string>
+    <string name="nomor_pekerja">Nomor Pekerja</string>
+    <string name="jenis_pesanan">Jenis Pesanan</string>
+    <string name="tanggal_pesan">Tanggal Pesan</string>
+    <string name="buat_pesanan">Buat Pesanan</string>
+    <string name="ubah">Ubah</string>
+    <string name="sebarkan_hasil_kuis">Sebarkan Hasil Kuis</string>
+    <string name="belum_ada_pesanan">Belum ada pesanan pada hari ini</string>
+    <string name="ubah_password">Ubah Kata Sandi</string>
+    <string name="ubah_profil">Ubah Profil</string>
+
+    <string-array name="user_type">
+        <item>spbu</item>
+        <item>sales_retail</item>
+        <item>oh</item>
+        <item>sales_services</item>
+        <item>patra_niaga</item>
+    </string-array>
+    <string-array name="history_type">
+        <item>Semua</item>
+        <item>Blitar T. Agung</item>
+        <item>Lumajang</item>
+        <item>Malang</item>
+    </string-array>
+    <string-array name="order_type">
+        <item>pembatalan kiriman</item>
+        <item>tarik LO</item>
+        <item>emergency MS2 manual</item>
+        <item>tambah perencanaan</item>
+        <item>setor angkut</item>
+    </string-array>
+</resources>

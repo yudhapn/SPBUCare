@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.pertamina.spbucare.viewmodel.QuizViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_quiz_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColorHint="#c1c2c4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/et_quiz_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_toggle"
+                android:hint="@string/nama_kuis" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_quiz_duration"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#c1c2c4"
+            app:layout_constraintEnd_toEndOf="@id/til_quiz_name"
+            app:layout_constraintStart_toStartOf="@id/til_quiz_name"
+            app:layout_constraintTop_toBottomOf="@id/til_quiz_name">
+
+            <EditText
+                android:id="@+id/et_quiz_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_toggle"
+                android:hint="@string/lama_pengerjaan_menit"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_quiz_beheld"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#c1c2c4"
+            app:layout_constraintEnd_toEndOf="@id/til_quiz_duration"
+            app:layout_constraintStart_toStartOf="@id/til_quiz_duration"
+            app:layout_constraintTop_toBottomOf="@id/til_quiz_duration">
+
+            <EditText
+                android:id="@+id/et_quiz_beheld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_toggle"
+                android:drawableStart="@drawable/ic_action_date"
+                android:drawablePadding="8dp"
+                android:focusable="false"
+                android:hint="@string/waktu_pelaksanaan"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/CustomProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:max="10"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/soal_nomor_1"
+            android:inputType="textMultiLine"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/progressBar"
+            app:layout_constraintStart_toStartOf="@id/progressBar"
+            app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+        <EditText
+            android:id="@+id/et_q1_a1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:hint="@string/jawaban_a"
+            android:inputType="textPersonName"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/et_q1"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rg_q1"
+            app:layout_constraintTop_toTopOf="@+id/rg_q1" />
+
+        <EditText
+            android:id="@+id/et_q1_a2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/jawaban_b"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@id/et_q1_a1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/et_q1_a1"
+            app:layout_constraintTop_toBottomOf="@+id/et_q1_a1" />
+
+        <EditText
+            android:id="@+id/et_q1_a3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/jawaban_c"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/et_q1_a2"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="@+id/et_q1_a2"
+            app:layout_constraintTop_toBottomOf="@+id/et_q1_a2" />
+
+
+        <EditText
+            android:id="@+id/et_q1_a4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/jawaban_d"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/et_q1_a3"
+            app:layout_constraintStart_toStartOf="@+id/et_q1_a3"
+            app:layout_constraintTop_toBottomOf="@+id/et_q1_a3" />
+
+        <EditText
+            android:id="@+id/et_q1_a7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/jawaban_g"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/et_q1_a6"
+            app:layout_constraintStart_toStartOf="@+id/et_q1_a6"
+            app:layout_constraintTop_toBottomOf="@+id/et_q1_a6" />
+
+        <EditText
+            android:id="@+id/et_q1_a5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/jawaban_e"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/et_q1_a4"
+            app:layout_constraintStart_toStartOf="@+id/et_q1_a4"
+            app:layout_constraintTop_toBottomOf="@+id/et_q1_a4" />
+
+        <EditText
+            android:id="@+id/et_q1_a6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/jawaban_f"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/et_q1_a5"
+            app:layout_constraintStart_toStartOf="@+id/et_q1_a5"
+            app:layout_constraintTop_toBottomOf="@+id/et_q1_a5" />
+
+        <RadioGroup
+            android:id="@+id/rg_q1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/et_q1"
+            app:layout_constraintTop_toBottomOf="@id/et_q1">
+
+
+            <RadioButton
+                android:id="@+id/rb_q1_a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="A" />
+
+            <RadioButton
+                android:id="@+id/rb_q1_a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="B" />
+
+            <RadioButton
+                android:id="@+id/rb_q1_a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="C" />
+
+            <RadioButton
+                android:id="@+id/rb_q1_a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="D" />
+
+            <RadioButton
+                android:id="@+id/rb_q1_a5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="E" />
+
+            <RadioButton
+                android:id="@+id/rb_q1_a6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="F" />
+
+            <RadioButton
+                android:id="@+id/rb_q1_a7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="G" />
+
+        </RadioGroup>
+
+        <ScrollView
+            android:id="@+id/sv_review"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/btn_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:text="Kembali"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Selanjutnya"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline" />
+
+            <Button
+                android:id="@+id/btn_done"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:text="Simpan"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

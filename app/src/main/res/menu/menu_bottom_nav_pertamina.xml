@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/dash_pertamina_dest"
+            android:icon="@drawable/ic_home"
+            android:title="@string/beranda"/>
+    <item
+            android:id="@+id/history_pertamina_dest"
+            android:icon="@drawable/ic_time"
+            android:title="@string/riwayat"/>
+    <item
+            android:id="@+id/confirmation_dest"
+            android:icon="@drawable/ic_icon"
+            android:title="@string/konfirmasi"/>
+    <item
+        android:id="@+id/notification_dest"
+        android:icon="@drawable/ic_envelope"
+        android:title="@string/notifikasi"/>
+</menu>

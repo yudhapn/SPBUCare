@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="educationVM"
+            type="com.pertamina.spbucare.viewmodel.EducationViewModel" />
+
+        <variable
+            name="informationVM"
+            type="com.pertamina.spbucare.viewmodel.InformationViewModel" />
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.DashboardSpbuFragment">
+
+            <ImageView
+                android:id="@+id/cancel_menu"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:background="@{@drawable/cancel_menu}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/deposit_menu"
+                app:layout_constraintTop_toTopOf="@id/deposit_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/batal"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/cancel_menu"
+                app:layout_constraintStart_toStartOf="@+id/cancel_menu"
+                app:layout_constraintTop_toBottomOf="@id/cancel_menu" />
+
+            <ImageView
+                android:id="@+id/deposit_menu"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="40dp"
+                android:background="@{@drawable/deposit_menu}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_deposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/hi"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/deposit_menu"
+                app:layout_constraintStart_toStartOf="@id/deposit_menu"
+                app:layout_constraintTop_toBottomOf="@id/deposit_menu" />
+
+            <ImageView
+                android:id="@+id/addition_menu"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:background="@{@drawable/add_menu}"
+                app:layout_constraintEnd_toStartOf="@id/deposit_menu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/deposit_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/tambah"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/addition_menu"
+                app:layout_constraintStart_toStartOf="@id/addition_menu"
+                app:layout_constraintTop_toBottomOf="@id/addition_menu" />
+
+            <ImageView
+                android:id="@+id/quiz_menu"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:background="@{@drawable/quiz_menu}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/withdraw_menu"
+                app:layout_constraintTop_toTopOf="@id/withdraw_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/kuis"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/quiz_menu"
+                app:layout_constraintStart_toStartOf="@+id/quiz_menu"
+                app:layout_constraintTop_toBottomOf="@id/quiz_menu" />
+
+            <ImageView
+                android:id="@+id/withdraw_menu"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="20dp"
+                android:background="@{@drawable/withdrawal_menu}"
+                app:layout_constraintEnd_toEndOf="@id/deposit_menu"
+                app:layout_constraintStart_toStartOf="@id/deposit_menu"
+                app:layout_constraintTop_toBottomOf="@+id/tv_deposit" />
+
+            <TextView
+                android:id="@+id/tv_withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/tarik_lo"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/withdraw_menu"
+                app:layout_constraintStart_toStartOf="@+id/withdraw_menu"
+                app:layout_constraintTop_toBottomOf="@+id/withdraw_menu" />
+
+            <ImageView
+                android:id="@+id/emergency_menu"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:background="@{@drawable/emergency_menu}"
+                app:layout_constraintEnd_toStartOf="@id/withdraw_menu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/withdraw_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/darurat"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/emergency_menu"
+                app:layout_constraintStart_toStartOf="@+id/emergency_menu"
+                app:layout_constraintTop_toBottomOf="@id/emergency_menu" />
+
+            <View
+                android:id="@+id/separator1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:background="#DDDDDD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_withdrawal" />
+
+            <TextView
+                android:id="@+id/information_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/informasi"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/separator1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_information"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:informationListData="@{informationVM.information}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/information_title" />
+
+            <View
+                android:id="@+id/separator2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:background="#DDDDDD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_information" />
+
+            <TextView
+                android:id="@+id/education_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat2"
+                android:text="@string/edukasi"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/separator2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_education"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:educationListData="@{educationVM.educations}"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/education_title"
+                app:spanCount="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

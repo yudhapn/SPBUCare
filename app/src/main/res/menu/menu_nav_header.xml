@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/manage_user"
+        android:icon="@drawable/ic_manage_user"
+        android:title="@string/atur_pengguna" />
+    <item
+        android:id="@id/feedback_dest"
+        android:icon="@drawable/ic_rating"
+        android:title="@string/ulasan" />
+    <item
+        android:id="@+id/edit_profile"
+        android:icon="@drawable/ic_edit_profile"
+        android:title="@string/ubah_profil" />
+    <item
+        android:id="@+id/edit_password"
+        android:icon="@drawable/ic_password"
+        android:title="@string/ubah_password" />
+    <item
+        android:id="@+id/signout"
+        android:icon="@drawable/ic_signout"
+        android:title="@string/keluar" />
+</menu>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="clickListener"
+            type="com.pertamina.spbucare.ui.adapter.OrderListener" />
+
+        <variable
+            name="order"
+            type="com.pertamina.spbucare.model.Order" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:onClick="@{() -> clickListener.onClick(order)}">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="12dp"
+            android:scaleType="centerCrop"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setOrderIconSmall="@{order.type}" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{order.applicantName}"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@id/thumbnail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:textColor="#3D3D3D"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:setCamelCase="@{order.type}" />
+
+        <ImageView
+                android:id="@+id/ic_p"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_p"
+                app:layout_constraintStart_toStartOf="@id/tv_description"
+                app:layout_constraintTop_toTopOf="@id/tv_p"
+                app:setType="@{`P`}" />
+
+        <TextView
+                android:id="@+id/tv_p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                app:setOrderType="@{`P\n`}"
+                app:setOrder="@{order.orderVolume.premium}"
+                android:textAlignment="center"
+                android:textColor="#ffc107"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/ic_p"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <ImageView
+                android:id="@+id/ic_bio"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="3dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_bio"
+                app:layout_constraintStart_toEndOf="@id/tv_p"
+                app:layout_constraintTop_toTopOf="@id/tv_bio"
+                app:setType="@{`BS`}" />
+
+        <TextView
+                android:id="@+id/tv_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                app:setOrderType="@{`BS\n`}"
+                app:setOrder="@{order.orderVolume.biosolar}"
+                android:textAlignment="center"
+                android:textColor="#9e9e9e"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/ic_bio"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <ImageView
+                android:id="@+id/ic_px"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="3dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_px"
+                app:layout_constraintStart_toEndOf="@id/tv_bio"
+                app:layout_constraintTop_toTopOf="@id/tv_px"
+                app:setType="@{`PX`}" />
+
+        <TextView
+                android:id="@+id/tv_px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                app:setOrderType="@{`PX\n`}"
+                app:setOrder="@{order.orderVolume.pertamax}"
+                android:textAlignment="center"
+                android:textColor="#1976d2"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/ic_px"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <ImageView
+                android:id="@+id/ic_pl"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="3dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pl"
+                app:layout_constraintStart_toEndOf="@id/tv_px"
+                app:layout_constraintTop_toTopOf="@id/tv_pl"
+                app:setType="@{`PL`}" />
+
+        <TextView
+                android:id="@+id/tv_pl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                app:setOrderType="@{`PL\n`}"
+                app:setOrder="@{order.orderVolume.pertalite}"
+                android:textAlignment="center"
+                android:textColor="#32599C"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/ic_pl"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <ImageView
+                android:id="@+id/ic_dt"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="3dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_dt"
+                app:layout_constraintStart_toEndOf="@id/tv_pl"
+                app:layout_constraintTop_toTopOf="@id/tv_dt"
+                app:setType="@{`DT`}" />
+
+        <TextView
+                android:id="@+id/tv_dt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                app:setOrderType="@{`DT\n`}"
+                app:setOrder="@{order.orderVolume.dexlite}"
+                android:textAlignment="center"
+                android:textColor="#558b2f"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/ic_dt"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <ImageView
+                android:id="@+id/ic_d"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="3dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_d"
+                app:layout_constraintStart_toEndOf="@id/tv_dt"
+                app:layout_constraintTop_toTopOf="@id/tv_d"
+                app:setType="@{`D`}" />
+
+        <TextView
+                android:id="@+id/tv_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                app:setOrderType="@{`D\n`}"
+                app:setOrder="@{order.orderVolume.pertadex}"
+                android:textAlignment="center"
+                android:textColor="#2e7d32"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/ic_d"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <ImageView
+                android:id="@+id/ic_pxt"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="3dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pxt"
+                app:layout_constraintStart_toEndOf="@id/tv_d"
+                app:layout_constraintTop_toTopOf="@id/tv_pxt"
+                app:setType="@{`PXT`}" />
+
+        <TextView
+                android:id="@+id/tv_pxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                app:setOrderType="@{`PXT\n`}"
+                app:setOrder="@{order.orderVolume.pxturbo}"
+                android:textAlignment="center"
+                android:textColor="#d50000"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/ic_pxt"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+                app:layout_constraintStart_toEndOf="@+id/tv_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_name"
+                app:setDateModief="@{order.createdOn}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout><!--android:visibility="@{type.equals(`spbu`) ? View.GONE : View.VISIBLE}"-->

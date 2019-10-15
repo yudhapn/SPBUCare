@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="clickListener"
+            type="com.pertamina.spbucare.ui.adapter.TopListener" />
+
+        <variable
+            name="order"
+            type="com.pertamina.spbucare.model.Order" />
+        <variable
+                name="position"
+                type="int" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:onClick="@{() -> clickListener.onClick(order, position)}">
+
+        <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="44dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="12dp"
+                android:scaleType="centerCrop"
+                android:padding="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:setIconTop="@{position}"/>
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{order.applicantName}"
+                android:textColor="#000"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@id/thumbnail"
+                app:layout_constraintTop_toTopOf="@+id/thumbnail"/>
+
+        <ImageView
+                android:id="@+id/ic_total"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                app:setType="@{`D`}" />
+
+        <TextView
+                android:id="@+id/tv_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                app:setTotalItem="@{order.orderVolume}"
+                android:textAlignment="center"
+                android:textColor="#2e7d32"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/ic_total"
+                app:layout_constraintTop_toTopOf="@id/ic_total"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_total"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "884515288458",
+    "firebase_url": "https://spbu-care.firebaseio.com",
+    "project_id": "spbu-care",
+    "storage_bucket": "spbu-care.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884515288458:android:5667f15991bc8aba",
+        "android_client_info": {
+          "package_name": "com.pertamina.spbucare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884515288458-btuj4p92hdnso1j2r6uv6uu1r7l91vts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pertamina.spbucare",
+            "certificate_hash": "85b13c942e9bdf2834fbe08ba5253b5feaf053d4"
+          }
+        },
+        {
+          "client_id": "884515288458-krsea3brb3frt2hefm7eoal5e4ove0ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATP15oWY6MnqV5_palojpyeTSADbSND74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884515288458-krsea3brb3frt2hefm7eoal5e4ove0ki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="detail_quiz"
+            type="com.pertamina.spbucare.model.Quiz" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.InformationDetailFragment">
+
+        <ImageView
+            android:id="@+id/iv_quiz"
+            android:layout_width="64dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/quiz_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/input_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/card_all_rounded4"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_quiz">
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/detail_kuis"
+                android:textColor="#000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/separator2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="#DDDDDD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_detail" />
+
+            <TextView
+                android:id="@+id/tv_createOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/waktu_pembuatan"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator2" />
+
+            <TextView
+                android:id="@+id/tv_value_createOn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textAlignment="textEnd"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_createOn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_beheld"
+                app:layout_constraintTop_toTopOf="@+id/tv_createOn"
+                app:setDateModief="@{detail_quiz.createdOn}" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/nama_kuis"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="@+id/tv_createOn"
+                app:layout_constraintTop_toBottomOf="@+id/tv_createOn" />
+
+            <TextView
+                android:id="@+id/tv_value_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{detail_quiz.name}"
+                android:textAlignment="textEnd"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_beheld"
+                app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/durasi"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="@+id/tv_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_value_duration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{(detail_quiz.duration / 60) + ` menit`}"
+                android:textAlignment="textEnd"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_duration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_beheld"
+                app:layout_constraintTop_toTopOf="@+id/tv_duration" />
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/jumlah_soal"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="@+id/tv_duration"
+                app:layout_constraintTop_toBottomOf="@+id/tv_duration" />
+
+            <TextView
+                android:id="@+id/tv_value_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_10_soal"
+                android:textAlignment="textEnd"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_amount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_beheld"
+                app:layout_constraintTop_toTopOf="@+id/tv_amount" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/status"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="@+id/tv_amount"
+                app:layout_constraintTop_toBottomOf="@+id/tv_amount" />
+
+            <ImageView
+                android:id="@+id/tv_value_status"
+                android:layout_width="44dp"
+                android:layout_height="28dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/tv_beheld"
+                app:layout_constraintTop_toTopOf="@+id/tv_status"
+                app:setStatusComplete="@{detail_quiz.complete}"
+                app:setStatusOpen="@{detail_quiz.open}" />
+
+            <TextView
+                android:id="@+id/tv_beheld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/waktu_pelaksanaan"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="@+id/tv_status"
+                app:layout_constraintTop_toBottomOf="@+id/tv_status" />
+
+            <TextView
+                android:id="@+id/tv_value_beheld"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textAlignment="textEnd"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_beheld"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/tv_beheld"
+                app:layout_constraintTop_toTopOf="@+id/tv_beheld"
+                app:setDateModief="@{detail_quiz.beHeldOn}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_card">
+
+            <Button
+                android:id="@+id/btn_open"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="@string/buka_kuis" />
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="@string/tutup_kuis" />
+
+            <Button
+                android:id="@+id/btn_generate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="@string/sebarkan_hasil_kuis" />
+
+            <Button
+                android:id="@+id/btn_work"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="@string/kerjakan" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
